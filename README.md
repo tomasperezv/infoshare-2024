@@ -28,7 +28,7 @@ guardrails hub install hub://guardrails/competitor_check
 Output String Evaluation
 
 ```
-OPENAI_API_KEY=[YOUR_OPENAI_KEY] ./output/output-string-evaluation.py
+OPENAI_API_KEY=[YOUR_OPENAI_KEY] python ./output/1-output-string-evaluation.py
 ```
 
 ### Example 2
@@ -36,7 +36,7 @@ OPENAI_API_KEY=[YOUR_OPENAI_KEY] ./output/output-string-evaluation.py
 Similarity Validators
 
 ```
-python ./output/similarity-validator.py
+python ./output/2-similarity-validator.py
 ```
 
 ### Example 3
@@ -44,7 +44,7 @@ python ./output/similarity-validator.py
 Reliability
 
 ```
-OPENAI_API_KEY=[YOUR_OPENAI_KEY] python ./output/reliability-validator.py
+OPENAI_API_KEY=[YOUR_OPENAI_KEY] python ./output/3-reliability-validator.py
 ```
 
 ### Example 4
@@ -52,7 +52,7 @@ OPENAI_API_KEY=[YOUR_OPENAI_KEY] python ./output/reliability-validator.py
 Business Domain Logic
 
 ```
-python ./output/business-domain-validator.py
+python ./output/4-business-domain-validator.py
 ```
 
 ### Example 5
@@ -60,7 +60,7 @@ python ./output/business-domain-validator.py
 Business Domain Logic 2
 
 ```
-python ./output/business-domain-2-validator.py
+python ./output/5-business-domain-2-validator.py
 ```
 
 ### Example 6
@@ -68,5 +68,5 @@ python ./output/business-domain-2-validator.py
 Constitutional Principles
 
 ```
-OPENAI_API_KEY=[YOUR_OPENAI_KEY] python ./output/constitutional.py
+OPENAI_API_KEY=[YOUR_OPENAI_KEY] python ./output/6-constitutional.py
 ```
