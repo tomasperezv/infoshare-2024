@@ -14,14 +14,23 @@ Virtual Env `pip install virtualenv`
 ```
 python3 -m venv ./demo-env
 source demo-env/bin/activate
-pip install requirements.txt
+pip install -r requirements.txt
 guardrails hub install hub://guardrails/similar_to_document
 guardrails hub install hub://guardrails/wiki_provenance
 guardrails hub install hub://cartesia/quotes_price
 guardrails hub install hub://guardrails/competitor_check
+guardrails hub install hub://guardrails/detect_prompt_injection
 ```
 
-## Examples
+## Input Examples
+
+### Example 1
+
+```
+python input/1-input-control.py
+```
+
+## Output Examples
 
 ### Example 1
 

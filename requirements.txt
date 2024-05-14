@@ -1,4 +1,6 @@
 langchain==0.1.20
 openai==1.29.0
-langchain-openai=0.1.6
-guardrails-ai=0.4.3
+langchain-openai==0.1.6
+guardrails-ai==0.4.3
+llm-guard==0.3.10
+last_layer==0.1.33
