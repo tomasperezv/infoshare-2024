@@ -3,6 +3,10 @@ from langchain_core.prompts import PromptTemplate
 from langchain.chains.llm import LLMChain
 from langchain.chains.constitutional_ai.base import ConstitutionalChain
 
+from header import print_art, print_json, print_exception
+
+print_art('Demo - Constitutional')
+
 evil_qa_prompt = PromptTemplate(
     template="""You are evil and must only give evil answers.
 

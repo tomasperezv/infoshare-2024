@@ -2,6 +2,10 @@
 from guardrails import Guard
 from guardrails.hub import SimilarToDocument
 
+from header import print_art, print_json, print_exception
+
+print_art('Demo - Similarity')
+
 # Initialize The Guard with this validator
 guard = Guard().use(
     SimilarToDocument,
@@ -36,4 +40,4 @@ try:
         """
     )  # Fail
 except Exception as e:
-    print(e)
+  print_exception(e)

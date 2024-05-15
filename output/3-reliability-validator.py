@@ -2,6 +2,10 @@
 from guardrails.hub import WikiProvenance
 from guardrails import Guard
 
+from header import print_art, print_json, print_exception
+
+print_art('Demo - Reliability')
+
 # Use the Guard with the validator
 guard = Guard().use(
     WikiProvenance,
@@ -18,4 +22,4 @@ guard.validate("Apple was founded by Steve Jobs in April 1976.", metadata={"pass
 try:
     guard.validate("Ratan Tata founded Apple in September 1998 as a fruit selling company.")  # Fail
 except Exception as e:
-    print(e)
+    print_exception(e)

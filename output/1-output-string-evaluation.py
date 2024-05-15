@@ -1,6 +1,9 @@
 from langchain.evaluation import load_evaluator
 from langchain.evaluation import EvaluatorType
 from langchain.evaluation import Criteria
+from header import print_art, print_json
+
+print_art('Demo - Evaluation')
 
 evaluator = load_evaluator("labeled_criteria", criteria=Criteria.CORRECTNESS)
 
@@ -10,4 +13,4 @@ eval_result = evaluator.evaluate_strings(
   reference="The Eiffel Tower is in France"
 )
 
-print(eval_result)
+print_json(eval_result)

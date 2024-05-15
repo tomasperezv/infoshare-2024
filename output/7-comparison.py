@@ -1,5 +1,9 @@
 from langchain.evaluation import load_evaluator
 
+from header import print_art, print_json, print_exception
+
+print_art('Demo - Comparison')
+
 custom_criteria = {
     "simplicity": "Is the language straightforward and unpretentious?",
     "clarity": "Are the sentences clear and easy to understand?",
@@ -17,4 +21,4 @@ result = evaluator.evaluate_string_pairs(
     input="Write some prose about families.",
 )
 
-print(result)
+print_json(result)

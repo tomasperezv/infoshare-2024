@@ -4,3 +4,5 @@ langchain-openai==0.1.6
 guardrails-ai==0.4.3
 llm-guard==0.3.10
 last_layer==0.1.33
+pyfiglet==1.0.2
+termcolor==2.4.0

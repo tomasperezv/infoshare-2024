@@ -1,6 +1,10 @@
 from guardrails import Guard
 from guardrails.hub import QuotesPrice
 
+from header import print_art, print_json, print_exception
+
+print_art('Demo - Business Logic')
+
 # Setup the Guard with the validator
 guard = Guard().use(QuotesPrice, on_fail="exception")
 
@@ -21,4 +25,4 @@ try:
         metadata={"currency": "USD"},
     )  # Price present in USD and expected is also USD
 except Exception as e:
-    print(e)
+    print_exception(e)
