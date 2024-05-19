@@ -25,3 +25,9 @@ try:
     guard.validate(llm_answer)
 except Exception as e:
     print_exception(e)
+
+guard = Guard().use(DetectPII, guardrails, "fix")
+res = guard.validate(llm_answer)
+
+print()
+print_json(res.validated_output, 'white', 'green')
