@@ -1,5 +1,6 @@
 example*
 input-example*
+output-example*
 .DS_Store
 demo-env*
 demo-3.9-env*
