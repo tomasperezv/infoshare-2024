@@ -8,21 +8,19 @@ print_art('Demo - Business Logic')
 # Setup the Guard with the validator
 guard = Guard().use(QuotesPrice, on_fail="exception")
 
-# Test passing responses
-guard.validate(
-    "The new Airpods Max are available at a crazy discount!"
-)  # No price present
+guardrails = { 'currency': 'GBP' }
+llm_answer = "The new Airpods Max are available at a crazy discount! It's only $9.99!"
 
-response = guard.validate(
-    "The new Airpods Max are available at a crazy discount! It's only $9.99!",
-    metadata={"currency": "GBP"},
-)  # Price present in USD, but expected is GBP
+print_json(guardrails, 'white', 'blue')
+print('\n')
+print_json(llm_answer, 'black', 'yellow')
 
 # Test failing response
 try:
     response = guard.validate(
-        "The new Airpods Max are available at a crazy discount! It's only $9.99!",
-        metadata={"currency": "USD"},
-    )  # Price present in USD and expected is also USD
+        llm_answer,
+        metadata=guardrails
+    )
 except Exception as e:
+    print()
     print_exception(e)
