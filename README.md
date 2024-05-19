@@ -20,6 +20,8 @@ guardrails hub install hub://guardrails/wiki_provenance
 guardrails hub install hub://cartesia/quotes_price
 guardrails hub install hub://guardrails/competitor_check
 guardrails hub install hub://guardrails/detect_prompt_injection
+guardrails hub install hub://guardrails/detect_pii
+guardrails hub install hub://guardrails/redundant_sentences
 ```
 
 ## Input Examples
