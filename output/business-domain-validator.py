@@ -8,7 +8,7 @@ print_art('Demo - Business Logic')
 # Setup the Guard with the validator
 guard = Guard().use(QuotesPrice, on_fail="exception")
 
-guardrails = { 'currency': 'GBP' }
+guardrails = { 'currency': 'USD' }
 llm_answer = "The new Airpods Max are available at a crazy discount! It's only $9.99!"
 
 print_json(guardrails, 'white', 'blue')
